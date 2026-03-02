@@ -1,15 +1,22 @@
 import streamlit as st
-import pickle
-import numpy as np
+import joblib
+import pandas as pd
 
-model = pickle.load(open("model.pkl", "rb"))
+model = joblib.load("model.pkl")
 
-st.title("Intelligent Property Price Prediction")
+st.title("🏠 Gurgaon Property Price Prediction")
 
+# Example inputs (adjust according to your dataset columns)
 area = st.number_input("Area (sq ft)")
 bedrooms = st.number_input("Bedrooms")
 bathrooms = st.number_input("Bathrooms")
 
 if st.button("Predict Price"):
-    prediction = model.predict([[area, bedrooms, bathrooms]])
-    st.success(f"Estimated Price: ₹ {prediction[0]:,.2f}")
+    input_df = pd.DataFrame([{
+        "area": area,
+        "bedrooms": bedrooms,
+        "bathrooms": bathrooms
+    }])
+    
+    prediction = model.predict(input_df)
+    st.success(f"Estimated Price: ₹ {prediction[0]:.2f} Crores")
