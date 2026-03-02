@@ -1,124 +1,107 @@
 # Gen_AI-Property_price_prediction-
 Intelligent Property Price Prediction is a machine learning–powered web application that estimates real estate prices based on property features such as location, area, number of bedrooms, amenities, and market trends.
 
-
 # 🏠 Intelligent Property Price Prediction
 
-An end-to-end Machine Learning project that predicts residential property prices based on key features such as location, area, number of bedrooms, and amenities.
+An end-to-end Machine Learning system designed to predict residential property prices using structured housing data and regression algorithms.
 
 ---
 
 ## 📌 Project Overview
 
-This project builds a complete ML pipeline including:
+This project builds a complete machine learning pipeline for predicting property prices based on key features such as area, location, number of bedrooms, and amenities.
 
-- Data Cleaning & Preprocessing  
-- Exploratory Data Analysis (EDA)  
-- Feature Engineering  
-- Model Training & Comparison  
-- Hyperparameter Tuning  
-- Model Evaluation  
-- Web Deployment  
+The system includes:
 
-The system provides real-time price predictions via an interactive web interface.
+- Data preprocessing
+- Exploratory Data Analysis (EDA)
+- Model comparison
+- Hyperparameter tuning
+- Model evaluation
+- Model serialization
+- Deployment-ready structure
 
 ---
 
 ## 🎯 Problem Statement
 
-Property price estimation is influenced by multiple factors and is often inconsistent when done manually.  
-This project aims to develop an intelligent ML-based system to accurately predict housing prices using structured data.
+Accurate property valuation is a complex problem influenced by multiple factors. Manual estimation methods are often inconsistent and subjective.
+
+The objective of this project is to develop an intelligent ML-based system capable of predicting property prices accurately using historical housing data.
 
 ---
 
-## 📊 Dataset
+## 📊 Dataset Description
 
-**Source:** Public housing dataset (e.g., Kaggle)
+Source: Public Housing Dataset (e.g., Kaggle)
 
 ### Features:
-- Location  
-- Area (sq. ft.)  
-- Bedrooms  
-- Bathrooms  
-- Furnishing Status  
-- Parking  
-- Property Type  
+- Location
+- Area (sq ft)
+- Bedrooms
+- Bathrooms
+- Furnishing Status
+- Parking
+- Property Type
 
-### Target:
-- Price  
+### Target Variable:
+- Price
 
 ---
 
 ## 📈 Exploratory Data Analysis
 
-- Correlation Heatmap  
-- Price Distribution Analysis  
-- Outlier Detection (IQR Method)  
-- Area vs Price Relationship  
+EDA techniques used:
 
-### Key Insight:
-Area and Location have the strongest impact on property prices.
+- Correlation heatmap
+- Distribution plots
+- Outlier detection (IQR)
+- Area vs Price analysis
+- Location-wise pricing trends
+
+### Key Insights:
+- Area strongly correlates with price
+- Location significantly impacts valuation
+- Price distribution is right-skewed
 
 ---
 
 ## 🧠 Models Implemented
 
-- Linear Regression  
-- Ridge & Lasso Regression  
-- Decision Tree Regressor  
-- Random Forest Regressor  
-- XGBoost Regressor  
+- Linear Regression
+- Random Forest Regressor
+- XGBoost Regressor
 
-Best model selected based on:
-- MAE  
-- RMSE  
-- R² Score  
+Models were compared using:
 
----
+- MAE
+- RMSE
+- R² Score
 
-## 📊 Model Evaluation (Example)
-
-| Model | MAE | RMSE | R² |
-|-------|------|------|------|
-| Linear Regression | XX | XX | XX |
-| Random Forest | XX | XX | XX |
-| XGBoost | XX | XX | XX |
+Best performing model selected based on lowest RMSE and highest R².
 
 ---
 
 ## ⚙️ Optimization Techniques
 
-- GridSearchCV  
-- Cross Validation  
-- Feature Selection  
-- Log Transformation  
-- Regularization  
+- GridSearchCV for hyperparameter tuning
+- 5-Fold Cross Validation
+- Feature scaling
+- Feature selection
+- Overfitting prevention techniques
 
 ---
 
 ## 🏗 System Architecture
 
-User Input → Preprocessing → Feature Encoding → Trained Model → Prediction → UI Output
+User Input → Data Preprocessing → Feature Encoding → Trained Model → Price Prediction → UI Output
 
 ---
 
-## 🛠 Tech Stack
+## 💾 Model Serialization
 
-- Python  
-- Pandas  
-- NumPy  
-- Matplotlib  
-- Seaborn  
-- Scikit-learn  
-- XGBoost  
-- Streamlit  
+Final trained model saved using Pickle:
 
----
-
-## 🚀 Installation
-
-```bash
-git clone https://github.com/your-username/property-price-prediction.git
-cd property-price-prediction
-pip install -r requirements.txt
-streamlit run app.py
+```python
+import pickle
+pickle.dump(model, open("model.pkl", "wb"))
