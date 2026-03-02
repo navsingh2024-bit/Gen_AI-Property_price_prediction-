@@ -2,192 +2,123 @@
 Intelligent Property Price Prediction is a machine learning–powered web application that estimates real estate prices based on property features such as location, area, number of bedrooms, amenities, and market trends.
 
 
-📖 Problem Statement
+# 🏠 Intelligent Property Price Prediction
 
-Accurately estimating property prices is a complex task influenced by multiple factors such as location, size, amenities, and market conditions. Traditional valuation methods can be subjective and inconsistent.
+An end-to-end Machine Learning project that predicts residential property prices based on key features such as location, area, number of bedrooms, and amenities.
 
-The objective of this project is to design and deploy an intelligent machine learning system that predicts property prices using historical housing data and advanced regression algorithms.
+---
 
-🚀 Project Overview
+## 📌 Project Overview
 
 This project builds a complete ML pipeline including:
 
-Data Cleaning & Preprocessing
+- Data Cleaning & Preprocessing  
+- Exploratory Data Analysis (EDA)  
+- Feature Engineering  
+- Model Training & Comparison  
+- Hyperparameter Tuning  
+- Model Evaluation  
+- Web Deployment  
 
-Exploratory Data Analysis
+The system provides real-time price predictions via an interactive web interface.
 
-Feature Engineering
+---
 
-Model Training & Comparison
+## 🎯 Problem Statement
 
-Hyperparameter Optimization
+Property price estimation is influenced by multiple factors and is often inconsistent when done manually.  
+This project aims to develop an intelligent ML-based system to accurately predict housing prices using structured data.
 
-Model Evaluation
+---
 
-Real-Time Web Deployment
+## 📊 Dataset
 
-The system allows users to input property features and receive real-time price predictions.
+**Source:** Public housing dataset (e.g., Kaggle)
 
-📊 Dataset Description
+### Features:
+- Location  
+- Area (sq. ft.)  
+- Bedrooms  
+- Bathrooms  
+- Furnishing Status  
+- Parking  
+- Property Type  
 
-Source: (Mention dataset source here — Kaggle / Government Portal / Custom Scraped Data)
+### Target:
+- Price  
 
-Features Used:
+---
 
-Location
+## 📈 Exploratory Data Analysis
 
-Area (sq. ft.)
+- Correlation Heatmap  
+- Price Distribution Analysis  
+- Outlier Detection (IQR Method)  
+- Area vs Price Relationship  
 
-Number of Bedrooms
+### Key Insight:
+Area and Location have the strongest impact on property prices.
 
-Number of Bathrooms
+---
 
-Furnishing Status
+## 🧠 Models Implemented
 
-Amenities
+- Linear Regression  
+- Ridge & Lasso Regression  
+- Decision Tree Regressor  
+- Random Forest Regressor  
+- XGBoost Regressor  
 
-Parking
+Best model selected based on:
+- MAE  
+- RMSE  
+- R² Score  
 
-Property Type
+---
 
-Target Variable:
+## 📊 Model Evaluation (Example)
 
-Price
+| Model | MAE | RMSE | R² |
+|-------|------|------|------|
+| Linear Regression | XX | XX | XX |
+| Random Forest | XX | XX | XX |
+| XGBoost | XX | XX | XX |
 
-Data Preprocessing Steps:
+---
 
-Handling missing values
+## ⚙️ Optimization Techniques
 
-Removing outliers
+- GridSearchCV  
+- Cross Validation  
+- Feature Selection  
+- Log Transformation  
+- Regularization  
 
-Encoding categorical variables
+---
 
-Feature scaling
+## 🏗 System Architecture
 
-Train-test split
+User Input → Preprocessing → Feature Encoding → Trained Model → Prediction → UI Output
 
-📈 Exploratory Data Analysis (EDA)
+---
 
-EDA was performed to identify:
+## 🛠 Tech Stack
 
-Correlation between features and price
+- Python  
+- Pandas  
+- NumPy  
+- Matplotlib  
+- Seaborn  
+- Scikit-learn  
+- XGBoost  
+- Streamlit  
 
-Outliers affecting prediction accuracy
+---
 
-Distribution of property prices
+## 🚀 Installation
 
-Location-wise pricing trends
-
-Key Insights:
-
-Area and location significantly impact property price
-
-Certain amenities increase valuation by 10–15%
-
-Price distribution is right-skewed
-
-🧠 Methodology
-
-We experimented with multiple regression models:
-
-Linear Regression
-
-Ridge & Lasso Regression
-
-Decision Tree Regressor
-
-Random Forest Regressor
-
-XGBoost Regressor
-
-Final Model Selection:
-
-The best-performing model was selected based on:
-
-Lowest RMSE
-
-Highest R² Score
-
-Generalization performance on test data
-
-📊 Model Evaluation
-
-Evaluation Metrics Used:
-
-MAE (Mean Absolute Error)
-
-RMSE (Root Mean Squared Error)
-
-R² Score
-
-Model	MAE	RMSE	R²
-Linear Regression	XX	XX	XX
-Random Forest	XX	XX	XX
-XGBoost	XX	XX	XX
-
-(Replace XX with actual results)
-
-⚙️ Optimization Techniques
-
-To improve model performance, the following techniques were applied:
-
-Hyperparameter tuning using GridSearchCV
-
-Cross-validation
-
-Feature selection
-
-Log transformation of target variable
-
-Removal of multicollinearity
-
-🏗 System Architecture
-User Input → Data Preprocessing → Feature Encoding → Trained Model → Price Prediction → UI Output
-Flow:
-
-User enters property details
-
-Inputs are preprocessed using saved pipeline
-
-Model predicts price
-
-Result displayed via web interface
-
-🔥 Technical Features
-
-✔ Custom preprocessing pipeline
-✔ Multiple model comparison framework
-✔ Hyperparameter tuning module
-✔ Real-time prediction interface
-✔ Modular and scalable architecture
-
-🛠 Tech Stack
-Programming Language
-
-Python
-
-Libraries
-
-Pandas
-
-NumPy
-
-Matplotlib
-
-Seaborn
-
-Scikit-learn
-
-XGBoost
-
-Deployment
-
-Streamlit / Flask
-
-GitHub
-
-🌐 Deployment
-
-Live Demo: (Add deployed link here)
-
-⚠️ Localhost links are not accepted.
+```bash
+git clone https://github.com/your-username/property-price-prediction.git
+cd property-price-prediction
+pip install -r requirements.txt
+streamlit run app.py
