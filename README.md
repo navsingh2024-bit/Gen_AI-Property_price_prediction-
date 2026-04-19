@@ -91,7 +91,8 @@ This project solves that by combining:
 
 ## 🏗️ System Architecture
 
-![Architecture](<img width="536" height="1902" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/6930fd7d-02f8-42e8-ba1e-38cd29449a2d" />
+![Architecture](<img width="536" height="1902" alt="image" src="https://github.com/user-attachments/assets/ed202516-fc39-43f6-86cd-32bdb01b8b6b" />
+
 )
 
 ### Pipeline Flow:
