@@ -177,13 +177,12 @@ pickle.dump(model, open("model.pkl", "wb"))
 - Personalized investment strategies  
 
 ---
-
 ## 👥 Team
 
-- Nav Prabhat Singh — ML + Agent Integration  
-- Lakshay Saharan — EDA + Visualization  
-- Tattva Rajput — Model Optimization  
-- Divyansh — Deployment + Documentation  
+- Nav Prabhat Singh —  ML Pipeline, Documentation(Project Report & README,Agent Workflow Documentation etc) 
+- Lakshay Saharan — Demo Video ,Agent Integration   
+- Tattva Rajput — Application Deployment & Hosting
+- Divyansh — App Development, Model Optimization 
 
 ---
 
