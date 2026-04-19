@@ -1,107 +1,134 @@
-# Gen_AI-Property_price_prediction-
-Intelligent Property Price Prediction is a machine learning–powered web application that estimates real estate prices based on property features such as location, area, number of bedrooms, amenities, and market trends.
+🏠 Intelligent Property Price Prediction (Gen AI + Agentic System)
 
-# 🏠 Intelligent Property Price Prediction
+An end-to-end Machine Learning + Generative AI system that predicts property prices and provides intelligent real estate investment advice using an agent-based architecture.
 
-An end-to-end Machine Learning system designed to predict residential property prices using structured housing data and regression algorithms.
+🚀 Project Overview
 
----
+This project goes beyond traditional ML prediction by integrating:
 
-## 📌 Project Overview
+📊 Machine Learning (Random Forest) for price prediction
+🤖 Agentic AI (LangGraph) for multi-step reasoning
+🔍 RAG (FAISS/Chroma) for market insights retrieval
+🧠 LLM for decision-making and advisory generation
+🌐 Streamlit UI for interactive user experience
 
-This project builds a complete machine learning pipeline for predicting property prices based on key features such as area, location, number of bedrooms, and amenities.
+👉 The system not only predicts price but also answers:
+“Is this property worth buying?”
 
-The system includes:
+🎯 Problem Statement
 
-- Data preprocessing
-- Exploratory Data Analysis (EDA)
-- Model comparison
-- Hyperparameter tuning
-- Model evaluation
-- Model serialization
-- Deployment-ready structure
+Real estate valuation is influenced by multiple dynamic factors such as location, amenities, and market trends.
 
----
+Traditional ML models:
 
-## 🎯 Problem Statement
+Predict prices ✔
+But don’t provide reasoning or advice ❌
 
-Accurate property valuation is a complex problem influenced by multiple factors. Manual estimation methods are often inconsistent and subjective.
+This project solves that by combining:
 
-The objective of this project is to develop an intelligent ML-based system capable of predicting property prices accurately using historical housing data.
+ML prediction
+Market context (RAG)
+AI reasoning (LLM)
+🧩 Key Features
+🔮 Accurate price prediction using Random Forest
+📊 Feature importance analysis
+🤖 AI-powered investment recommendations
+📚 Retrieval-Augmented Generation (RAG)
+🔄 Multi-step reasoning using LangGraph agents
+📄 Structured advisory output (JSON format)
+📊 Dataset Description
 
----
+Source: Public Housing Dataset (Kaggle)
 
-## 📊 Dataset Description
-
-Source: Public Housing Dataset (e.g., Kaggle)
-
-### Features:
-- Location
-- Area (sq ft)
-- Bedrooms
-- Bathrooms
-- Furnishing Status
-- Parking
-- Property Type
-
-### Target Variable:
-- Price
-
----
-
-## 📈 Exploratory Data Analysis
-
-EDA techniques used:
-
-- Correlation heatmap
-- Distribution plots
-- Outlier detection (IQR)
-- Area vs Price analysis
-- Location-wise pricing trends
-
-### Key Insights:
-- Area strongly correlates with price
-- Location significantly impacts valuation
-- Price distribution is right-skewed
-
----
-
-## 🧠 Models Implemented
-
-- Linear Regression
-- Random Forest Regressor
-- XGBoost Regressor
-
-Models were compared using:
-
-- MAE
-- RMSE
-- R² Score
-
-Best performing model selected based on lowest RMSE and highest R².
-
----
-
-## ⚙️ Optimization Techniques
-
-- GridSearchCV for hyperparameter tuning
-- 5-Fold Cross Validation
-- Feature scaling
-- Feature selection
-- Overfitting prevention techniques
-
----
-
-## 🏗 System Architecture
-
-User Input → Data Preprocessing → Feature Encoding → Trained Model → Price Prediction → UI Output
-
----
-
-## 💾 Model Serialization
-
-Final trained model saved using Pickle:
-
-```python
+Features:
+Location
+Area (sq ft)
+Bedrooms
+Bathrooms
+Furnishing Status
+Property Type
+Target:
+Price (in Crores)
+📈 Exploratory Data Analysis
+Correlation heatmap
+Distribution plots
+Outlier detection (IQR)
+Area vs Price relationship
+Location-based trends
+Insights:
+Area has strong positive correlation with price
+Location significantly impacts valuation
+Price distribution is right-skewed
+🧠 Models Implemented
+Linear Regression
+Random Forest Regressor ✅ (Best)
+XGBoost Regressor
+📌 Final Model Performance:
+R² Score: 0.87
+MAE: 0.18 Crores
+🏗️ System Architecture
+6
+Pipeline Flow:
+User Input (Streamlit UI)
+        ↓
+Data Preprocessing
+        ↓
+ML Model (Random Forest)
+        ↓
+Predicted Price
+        ↓
+LangGraph Agent (State Manager)
+        ↓
+RAG (FAISS - Market Data)
+        ↓
+LLM Reasoning Engine
+        ↓
+Decision Engine
+        ↓
+Structured Advisory Report
+        ↓
+UI Output
+🤖 Agentic AI Workflow
+User inputs property details
+ML model predicts price
+RAG retrieves market insights
+LLM compares prediction vs market
+Agent generates recommendation
+📄 Sample Output
+{
+  "summary": "Property slightly overpriced",
+  "comps": "Similar properties are cheaper",
+  "action": "Negotiate before buying",
+  "risk": "Moderate",
+  "disclaimer": "Not financial advice"
+}
+⚙️ Tech Stack
+Frontend: Streamlit
+ML: Scikit-learn, XGBoost
+LLM & Agents: LangChain, LangGraph
+Vector DB: FAISS / Chroma
+Data Handling: Pandas, NumPy
+💾 Model Serialization
 import pickle
 pickle.dump(model, open("model.pkl", "wb"))
+🚀 Deployment
+Streamlit Cloud / Hugging Face Spaces
+Interactive UI for real-time predictions
+🔮 Future Improvements
+Real-time market API integration
+LLM fine-tuning for domain accuracy
+Multi-city dataset expansion
+Personalized investment strategies
+👥 Team
+Nav Prabhat Singh — ML + Agent Integration
+Lakshay Saharan — EDA + Visualization
+Tattva Rajput — Model Optimization
+Divyansh — Deployment + Documentation
+⭐ Why This Project Stands Out
+
+Unlike traditional ML projects, this system:
+
+✔ Combines ML + Gen AI
+✔ Uses RAG for real-world context
+✔ Performs reasoning, not just prediction
+✔ Produces actionable investment insights
