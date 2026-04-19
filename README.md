@@ -91,7 +91,7 @@ This project solves that by combining:
 
 ## 🏗️ System Architecture
 
-![Architecture](architecture.png)
+![Architecture](<img width="536" height="1902" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/66d7aa67-0891-4e97-a341-766117c3706c" />)
 
 ### Pipeline Flow:
 User Input (Streamlit UI)
