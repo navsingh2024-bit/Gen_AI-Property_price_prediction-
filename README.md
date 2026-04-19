@@ -91,7 +91,8 @@ This project solves that by combining:
 
 ## 🏗️ System Architecture
 
-![Architecture](<img width="536" height="1902" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/66d7aa67-0891-4e97-a341-766117c3706c" />)
+![Architecture](<img width="536" height="1902" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/6930fd7d-02f8-42e8-ba1e-38cd29449a2d" />
+)
 
 ### Pipeline Flow:
 User Input (Streamlit UI)
@@ -136,44 +137,60 @@ UI Output
   "risk": "Moderate",
   "disclaimer": "Not financial advice"
 }
------
+```
 
-⚙️ Tech Stack
-Frontend: Streamlit
-ML: Scikit-learn, XGBoost
-LLM & Agents: LangChain, LangGraph
-Vector DB: FAISS / Chroma
-Data Handling: Pandas, NumPy
------
+---
 
-💾 Model Serialization
+## ⚙️ Tech Stack
+
+- **Frontend:** Streamlit  
+- **ML:** Scikit-learn, XGBoost  
+- **LLM & Agents:** LangChain, LangGraph  
+- **Vector DB:** FAISS / Chroma  
+- **Data Handling:** Pandas, NumPy  
+
+---
+
+## 💾 Model Serialization
+
+```python
 import pickle
 pickle.dump(model, open("model.pkl", "wb"))
------
+```
 
-🚀 Deployment
-Streamlit Cloud / Hugging Face Spaces
-Interactive UI for real-time predictions
------
+---
 
-🔮 Future Improvements
-Real-time market API integration
-LLM fine-tuning for domain accuracy
-Multi-city dataset expansion
-Personalized investment strategies
------
-👥 Team
-Nav Prabhat Singh — ML + Agent Integration
-Lakshay Saharan — EDA + Visualization
-Tattva Rajput — Model Optimization
-Divyansh — Deployment + Documentation
------
+## 🚀 Deployment
 
-⭐ Why This Project Stands Out
+- Streamlit Cloud  
+- Hugging Face Spaces  
+- Interactive UI for real-time predictions  
+
+---
+
+## 🔮 Future Improvements
+
+- Real-time market API integration  
+- LLM fine-tuning for domain accuracy  
+- Multi-city dataset expansion  
+- Personalized investment strategies  
+
+---
+
+## 👥 Team
+
+- Nav Prabhat Singh — ML + Agent Integration  
+- Lakshay Saharan — EDA + Visualization  
+- Tattva Rajput — Model Optimization  
+- Divyansh — Deployment + Documentation  
+
+---
+
+## ⭐ Why This Project Stands Out
 
 Unlike traditional ML projects, this system:
 
-✔ Combines ML + Gen AI
-✔ Uses RAG for real-world context
-✔ Performs reasoning, not just prediction
-✔ Produces actionable investment insights
+✔ Combines ML + Gen AI  
+✔ Uses RAG for real-world context  
+✔ Performs reasoning, not just prediction  
+✔ Produces actionable investment insights  
